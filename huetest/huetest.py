@@ -1,4 +1,4 @@
-__author__ = 'Dave'
+__author__ = 'Dave', 'Ryan'
 #!/usr/bin/python
 
 
@@ -15,6 +15,12 @@ except ImportError:
 #-----------------------------------------------------------------------------------------------------------------------
 from phue import Bridge
 #-----------------------------------------------------------------------------------------------------------------------
+
+from rgb_cie import Converter
+
+converter = Converter()
+
+converter.rgbToCIE1931(255,0,0) #See https://github.com/benknight/hue-python-rgb-converter
 
 
 #   Import time library for creating delays in scroll function
